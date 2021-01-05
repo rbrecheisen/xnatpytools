@@ -31,7 +31,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    description="Collection of XPython tools for working with XNAT",
+    description="Collection of Python tools for working with XNAT",
     install_requires=requirements,
     license="MIT license",
     long_description=readme + '\n\n' + history,
