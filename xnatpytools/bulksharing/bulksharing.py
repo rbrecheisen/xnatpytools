@@ -11,24 +11,26 @@ CLIENT = None
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--host')
-    parser.add_argument('--user')
-    parser.add_argument('--password')
-    parser.add_argument('--source_project')
-    parser.add_argument('--target_project')
-    parser.add_argument('--test_run', type=int, default=1)
-    parser.add_argument('--log_dir', default='.')
-    parser.add_argument('--experiments', default=None)
-    parser.add_argument('--experiments_file', default=None)
+    parser.add_argument('--host', help='Host name of XNAT system, e.g., https://xnat.acc.dh.unimaas.nl')
+    parser.add_argument('--user', help='Username with admin/owner rights in source project')
+    parser.add_argument('--password', help='Password')
+    parser.add_argument('--source_project', help='Project FROM which data is shared')
+    parser.add_argument('--target_project', help='Project TO which data is shared')
+    parser.add_argument('--test_run', type=int, default=1, help='If test_run=1 nothing will actually be done')
+    parser.add_argument('--log_dir', default='.', help='Path to logging directory')
+    parser.add_argument('--experiments', default=None, help='Comma-separated list of experiment IDs')
+    parser.add_argument('--experiments_file', default=None, help='Text file with experiment ID on each line')
     args = parser.parse_args()
     return args
 
 
 def show_intro():
     LOG.print("""
+    
     === BULK SHARING ===
     Welcome to the bulk sharing tool of the XnatPyTools package!
     This tool allows you to share image experiments that are stored in XNAT from one project to another.
+    
     """)
 
 
