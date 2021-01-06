@@ -40,9 +40,14 @@ setup(
     name='xnatpytools',
     packages=find_packages(include=['xnatpytools', 'xnatpytools.*']),
     setup_requires=setup_requirements,
+    entry_points={
+        'console_scripts': [
+            'bulksharing=xnatpytools.bulksharing.bulksharing:main',
+        ],
+    },
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/rbrecheisen/xnatpytools',
-    version='0.1.0',
+    version=os.environ['VERSION'],
     zip_safe=False,
 )
