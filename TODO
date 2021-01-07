@@ -1,0 +1,5 @@
+TODO
+
+- Sharing experiments based on wildcards, e.g., *_DICOM_HEAD
+- Sharing list of subject IDs (all experiments within each subject will be shared)
+- Sharing subjects/experiments based on other filters
