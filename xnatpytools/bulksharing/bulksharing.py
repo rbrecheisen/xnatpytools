@@ -42,10 +42,10 @@ def get_client(args):
 
 def get_experiments(args):
     if os.path.isfile(args.experiments):
-        with open(args.experiments_file, 'r') as f:
+        with open(args.experiments, 'r') as f:
             experiments = []
             for experiment in f.readlines():
-                experiments.append(experiment)
+                experiments.append(experiment.strip())
             return experiments
     else:
         # Assume args.experiments contains comma-separated list of IDs
