@@ -45,7 +45,7 @@ def get_experiments(args):
         with open(args.experiments, 'r') as f:
             experiments = []
             for experiment in f.readlines():
-                experiments.append(experiment)
+                experiments.append(experiment.strip())
             return experiments
     else:
         # Assume args.experiments contains comma-separated list of IDs
