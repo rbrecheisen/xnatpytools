@@ -3,6 +3,7 @@
 """The setup script."""
 
 import os
+
 from setuptools import setup, find_packages
 
 with open('README.rst') as readme_file:
@@ -43,7 +44,7 @@ setup(
     setup_requires=setup_requirements,
     entry_points={
         'console_scripts': [
-            'bulksharing=xnatpytools.bulksharing.bulksharing:main',
+            'bulksharing=xnatpytools.bulksharing.bulksharing2:main',
         ],
     },
     test_suite='tests',
